@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Links</title>
+    <meta name="description" content="Links – A-Frame">
+    <script src="js/aframe-master.js"></script>
+    <!--
+    <script src="js/components/aframe-tooltip-component.js"></script>
+    -->
+    <script src="js/components/camera-position.js"></script>
+    <script src="js/components/link-controls.js"></script>
+  </head>
+  <body>
+    <a-scene Xfog="color: #241417; near: 0; far: 30;" raycaster="far: 100; objects: [link];" cursor="rayOrigin: mouse" camera-position>
+      <a-assets>
+        <img id="thumbHome" src="./images/home.png">
+        <img id="thumbSunrise" src="./images/sunrise.png">
+        <img id="thumbCity" crossOrigin="anonymous" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Dent_de_Vaulion_-_360_degree_panorama.jpg">
+      </a-assets>
+      <a-link href="index.html" position="-3.5 1.5 -1.0" image="#thumbHome" title="Move to Home"></a-link>
+      <a-link href="sunrise.html" position="0 1.5 -1.0" image="#thumbSunrise"  title="Move to Sunrise"></a-link>
+      <a-link href="city.html" position="3.5 1.5 -1.0" image="#thumbCity" title="Move to City"></a-link>
+      <a-sky src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Aldara_parks.jpg" rotation="0 -130 0"></a-sky>
+      <a-entity id="leftHand" link-controls="hand: left"></a-entity>
+      <a-entity id="rightHand" link-controls="hand: right"></a-entity>
+    </a-scene>
+  </body>
+</html>
